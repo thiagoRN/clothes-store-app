@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background-color: #111827;
+    --alt-background-color: #f6f6f6;
+    --primary-color: #8e1ff5;
+    --secondary-color: #567aff;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #0a0a0a;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-theme="light"] {
+    --background-color: #f6f6f6;
+    --alt-background-color: #111827;
+    --primary-color: #567aff;
+    --secondary-color: #8e1ff5;
+    --primary-text-color: #0a0a0a;
+    --secondary-text-color: #ffffff;
+    
+}
+
+[data-theme="dark"]{
+    --background-color: #111827;
+    --alt-background-color: #f6f6f6;
+    --primary-color: #8e1ff5;
+    --secondary-color: #567aff;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #0a0a0a;
+}
+/* #13072E
+#3F2182 
+background: rgb(19,7,46);
+background: linear-gradient(150deg, rgba(19,7,46,1) 0%, rgba(63,33,130,1) 35%);
+*/
