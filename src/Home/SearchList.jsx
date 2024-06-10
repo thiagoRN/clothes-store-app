@@ -4,11 +4,11 @@ import SearchBar from '../components/SearchBar';
 import Product from '../components/Product';
 
 
+
 const SearchList = () => {
     const [results, setResults] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    console.log(currentPage)
     const itemsPerPage = 5;
     const lastIndex = currentPage * itemsPerPage;
     const firstIndex = lastIndex - itemsPerPage;
@@ -18,7 +18,7 @@ const SearchList = () => {
     const pageNum = Math.ceil(results.length / itemsPerPage);
     const numbers = [...Array(pageNum + 1).keys()].slice(1)
     
-    console.log(import.meta.env.VITE_USER)
+    
     
     const prePage = ()=>{
       if(currentPage !== firstIndex){
@@ -31,7 +31,7 @@ const SearchList = () => {
       }}
  
     
-    
+      
       
 
   return (

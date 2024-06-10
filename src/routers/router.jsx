@@ -7,6 +7,11 @@ import DashboardLayout from "../dashboard/DashboardLayout";
 import Dashboard from "../dashboard/Dashboard";
 import UploadClothes from "../dashboard/UploadClothes";
 import EditClothes from "../dashboard/EditClothes";
+import ManageProducts from "../dashboard/ManageProducts";
+import SignUp from "../components/SignUp";
+import Login from "../components/Login";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+
 
   const router = createBrowserRouter([
     {
@@ -35,11 +40,15 @@ import EditClothes from "../dashboard/EditClothes";
       children: [
         {
           path: "/admin/dashboard",
-          element: <Dashboard />
+          element: <PrivateRoute> <Dashboard/> </PrivateRoute>
         },
         {
           path: "/admin/dashboard/upload",
           element: <UploadClothes />
+        },
+        {
+          path: "/admin/dashboard/manage",
+          element: <ManageProducts />
         },
         {
           path: "/admin/dashboard/edit-clothes/:id",
@@ -47,6 +56,9 @@ import EditClothes from "../dashboard/EditClothes";
           loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
         }
       ]
+    }, {
+      path: "login",
+      element: <Login/>
     }
   ]);
 
